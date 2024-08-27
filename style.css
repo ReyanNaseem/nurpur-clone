@@ -30,10 +30,10 @@
     flex-direction: column;
 }
 .page1 .header{
-    position: sticky;
+    position: fixed;
     top: 0px;
     left: 0px;
-    width: 100%;
+    width: 100vw;
     height: 102.5px;
     background-color: white;
     /* border: 2px solid red; */
@@ -69,6 +69,7 @@
     font-size: 15px;
 }
 .page1 .header .head-con nav a{
+    font-size: 1vw;
     text-decoration: none;
     color: #0A5488;
 }
@@ -82,6 +83,7 @@
 
 /* video */
 .page1 .video-con{
+    margin-top: 102.5px;
     position: relative;
     width: 100%;
     height: 100%;
@@ -154,64 +156,34 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 40%;
+    width: 50%;
     padding: 0px 16px;
     /* border: 1px solid red; */
     /* background-color: antiquewhite; */
 }
 .page2 .content .left{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 25px;
 }
 .page2 .content .right{
     height: 100%;
-    width: 60%;
+    width: 50%;
     padding: 0px 24px;
     /* background-color: lightcoral; */
 }
 .page2 .content .right img{
     max-width: 100%;
     /* height: 100%; */
-    object-fit: cover;
+    /* object-fit: cover; */
     /* border: 2px solid red; */
 }
-@media(max-width:770px){
-    .page2 .content{
-        flex-direction: column;
-    }
-    .page2 .content .left{
-        font-size: 16px;
-    }
-}
-@media(max-width:1200px){
-    .page2 .content .left{
-        padding: 0px 0px;
-        height: auto;
-        width: 40%;
-        /* background-color: antiquewhite; */
-    }
-    .page2 .content .left{
-        font-size: 2vh;
-    }
-}
-@media(max-width:1025px){
-    .page2 .content{
-        width: 90%;
-    }
-    .page2 .content .left{
-        font-size: 1.5vw;
-    }
-}
+
 
 .page2 .grass{
     width: 100%;
-    /* border: 1px solid red; */
-    /* height: auto; */
-    /* background-color: lightcoral; */
 }
 .page2 .grass img{
     width: 100%;
-    
 }
 
 /* page 3 */
@@ -251,10 +223,11 @@
     font-size: 20px;
     color: #0A5488;
 }
+/* product */
 .product{
     /* flex-direction: column; */
     width: 80%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -271,22 +244,26 @@
     justify-content: center;
     flex-direction: column;
     width: 30%;
-    height: 100%;
+    height: auto;
     padding: 20px 10px;
     /* border: 1px solid red; */
 }
 .product .part .p-img{
     width: 100%;
     height: 60%;
+    /* border: 1px solid red; */
 }
 .product .part .p-img img{
-    height: 100%;
+    height: 19vw;
 }
 .product .part h4{
+    font-size: 1.7vw;
     margin: 10px;
+    text-align: center;
     color: #0A5488;
 }
 .product .part p{
+    font-size: 1.1vw;
     margin-top: 10px;
     text-align: center;
     color: #5c5c5c;
@@ -303,6 +280,7 @@
     /* border: 1px solid red; */
     background-color: none;
 }
+
 /* .svg-background {
     display: block; 
 } */
@@ -341,6 +319,7 @@
 .media .child h5{
     color: #0A5488;
 }
+
 .footer{
     width: 100%;
     height: 50vh;
@@ -395,6 +374,7 @@
     /* border: 1px solid red; */
 }
 .footer .part3 .upper a{
+    font-size: 1.5vw;
     color: #5c5c5c;
     text-decoration: none;
 }
@@ -418,6 +398,7 @@
 }
 .footer .part3 .lower .left p{
     display: inline-block;
+    font-size: 14px;
 }
 .footer .part3 .lower .left i{
     color: #0A5488;
@@ -465,9 +446,10 @@
     color: #0A5488;
     background-color: white;
 }
-
-
-@media only screen and (max-width:1023px) {
+@media only screen and (max-width:600px){
+    .page1{
+        height: auto;
+    }
     .page1 .header .head-con nav{
         display: none;
     }
@@ -477,4 +459,146 @@
     .page1 .header .head-con .icon #menu{
         display: block;
     }
+    .page1 .video-con{
+        width: 100%;
+        height: 50vh;
+    }
+    .page2 .content{
+        flex-direction: column;
+        height: 407.7px;
+        margin: 0px 0px;
+        padding: 0px 0px 0px;
+    }
+    .page2 .content .left{
+        flex-direction: column;
+        height: 35%;
+        width: 100%;
+        padding: 0px 0px;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+    }
+    .page2 .content .right{
+        height: 65%;
+        width: 60%;
+        padding: 0px 0px;
+    }
+    .page2 .content .right img{
+        width: auto;
+        object-position: center;
+        object-fit: contain;
+    }
+    .product{
+        flex-direction: column;
+        width: 100%;
+        min-height: 80vh;
+    }
+    .product .part{
+        width: 80%;
+        height: 80vh;
+    }
+    .product .part .p-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 60%;
+    }
+    .product .part .p-img img{
+        height: 100%;
+    }
+    .product .part h4{
+        font-size: 14px;
+    }
+    .product .part p{
+        font-size: 12px;
+    }
+    .product .line{
+        display: none;
+    }
+    .media{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .media .child{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* flex-direction: column; */
+        width: 90%;
+        /* height: 100%; */
+        /* border: 1px solid blue; */
+    }
+    .footer{
+        flex-direction: column;
+        height: auto;
+    }
+    .footer .part1{
+        width: 70%;
+        height: 20vh;
+        /* border: 1px solid blue; */
+    }
+    .footer .part2{
+        width: 70%;
+        height: 20vh;
+        /* border: 1px solid blue; */
+    }
+    .footer .part3{
+        width: 100%;
+        height: 60vh;
+        /* border: 1px solid blue; */
+    }
+    .footer .part3 .upper a{
+        font-size: 12px;
+    }
+    .copyright{
+        font-size: 12px;
+        text-align: center;
+    }
 }
+
+@media only screen and (max-width:900px) and (min-width:600px) {
+    .page1 .header .head-con nav{
+        display: none;
+    }
+    .page1 .header .head-con .icon #doted{
+        display: none;
+    }
+    .page1 .header .head-con .icon #menu{
+        display: block;
+    }
+    .page2 .content{
+        flex-direction: column;
+        height: 407.7px;
+        margin: 0px 0px;
+        padding: 0px 0px 0px;
+    }
+    .page2 .content .left{
+        flex-direction: column;
+        height: 35%;
+        width: 100%;
+        padding: 0px 0px;
+        font-size: 14px;
+        line-height: 15px;
+        text-align: center;
+    }
+    .page2 .content .right{
+        height: 65%;
+        width: 60%;
+        padding: 0px 0px;
+    }
+    .page2 .content .right img{
+        width: auto;
+        object-position: center;
+        object-fit: contain;
+    }
+    .product .part{
+        height: 80%;
+    }
+    .copyright{
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
